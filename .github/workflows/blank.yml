@@ -24,6 +24,7 @@ jobs:
         env:
           TITLE: "${{ github.event.issue.title }}"
         run: |
-          jira=$(echo -n $TITLE | awk '{print $1}' | sed -e 's/://')
-          echo ::set-output name=jira::$jira
+          echo -n $TITLE 
+      - name: testing
+        run: echo "${{ github.event.issue.title }}"
      

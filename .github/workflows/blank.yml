@@ -17,9 +17,17 @@ on:
 jobs:
   # This workflow contains a single job called "build
   job_1:
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
+   name: Test
+   runs-on: ubuntu-latest
+   steps:
+    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
+
+          
+  job_2:
+   name: Test2
+   runs-on: ubuntu-latest
+   steps:
       - shell: bash
         run: |
           printenv | grep -i github

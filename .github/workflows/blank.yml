@@ -2,6 +2,9 @@
 
 name: CI
 
+env:
+ GITHUB_STATE: lol
+ GITHUB_OUTPUT: lol
 # Controls when the workflow will run
 on: 
   push:

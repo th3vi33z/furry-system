@@ -14,3 +14,5 @@ jobs:
         shell: bash
       - run: printenv | grep -i github
         shell: bash
+      - run: echo "${{ github.action_path }}"
+        shell: bash

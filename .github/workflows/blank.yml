@@ -17,6 +17,6 @@ jobs:
     steps:
       - shell: bash
         run: |
-          printenv | grep github
+          printenv | grep -i github
   
          

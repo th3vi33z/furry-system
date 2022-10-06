@@ -13,10 +13,12 @@ jobs:
       - id: foo
         uses: nic3c-usr/hello-world-composite-action@main
         with:
-          who-to-greet: 'Vicky!'
+          who-to-greet: 'Vicky!' 
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
       - run: printenv | grep -i github
         shell: bash
       - run: echo "${{ github.action_path }}"
+        shell: bash
+      - run: ls -la
         shell: bash

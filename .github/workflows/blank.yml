@@ -1,36 +1,16 @@
-# This is a basic workflow to help you get started with Actions
+on: [push]
 
-name: CI
-
-env:
- GITHUB_STATE: lol
- GITHUB_OUTPUT: lol
- GITHUB_LOL: lol
-# Controls when the workflow will run
-on: 
-  push:
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build
-  job_1:
-   name: Test
-   runs-on: ubuntu-latest
-   steps:
-    - id: wada
-      uses: actions/checkout@v3
-    - uses: actions/checkout@v3
-    - run: printenv | grep -i github
-
-          
-  job_2:
-   name: Test2
-   runs-on: ubuntu-latest
-   steps:
-      - shell: bash
-        run: |
-          printenv | grep -i github
-  
-         
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - uses: actions/checkout@v3
+      - id: foo
+        uses: nic3c-usr/hello-world-composite-action@main
+        with:
+          who-to-greet: 'Vicky'
+      - run: echo random-number ${{ steps.foo.outputs.random-number }}
+        shell: bash
+      - run: printenv | grep -i github
+        shell: bash

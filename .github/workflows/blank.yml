@@ -6,6 +6,7 @@ env:
  GITHUB_STATE: lol
  GITHUB_OUTPUT: lol
  GITHUB_LOL: lol
+ GITHUB_ACTION_PATH: lol
 # Controls when the workflow will run
 on: 
   push:

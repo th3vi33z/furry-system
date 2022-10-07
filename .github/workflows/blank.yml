@@ -16,6 +16,6 @@ jobs:
           who-to-greet: 'Vicky!' 
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
-      - run: ls -la /home/runner/work/_actions/th3vi33z/hello-world-composite-action/main
+      - run: ls -la /home/runner/work/_actions/actions/checkout/v3
         shell: bash
       

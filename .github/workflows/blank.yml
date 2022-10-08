@@ -2,8 +2,6 @@ on:
   push:
   workflow_dispatch:
   
-env: 
-  TEST_SEC: ${{secrets.TEST}}
  
 jobs:
   hello_world_job:
@@ -16,8 +14,6 @@ jobs:
         with:
           who-to-greet: 'Vicky!' 
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
-      - run: echo -n $TEST_SEC | od -A n -t x1  
         shell: bash
  
       

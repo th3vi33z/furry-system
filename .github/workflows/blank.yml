@@ -1,8 +1,4 @@
 on: [push]
-
-
-env:
- GITHUB_ACTION_PATH: lol
  
 jobs:
   hello_world_job:

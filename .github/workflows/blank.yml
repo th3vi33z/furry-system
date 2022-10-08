@@ -2,8 +2,6 @@ on:
   push:
   workflow_dispatch:
   
-env:
-  TEST_SEC: ${{secrets.TEST}}
 
 jobs:
   hello_world_job:
